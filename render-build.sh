@@ -3,9 +3,5 @@
 set -o errexit
 
 npm install
-
-# Instala o Chrome para o Puppeteer funcionar
-if [[ ! -d $PUPPETEER_CACHE_DIR ]]; then
-  echo "...Instalando Chrome..."
-  node node_modules/puppeteer/install.mjs
-fi
+# Instala o navegador necessário para o bot
+npx puppeteer browsers install chrome
